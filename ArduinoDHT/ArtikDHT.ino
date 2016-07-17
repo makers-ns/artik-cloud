@@ -6,7 +6,7 @@
 char server[] = "api.artik.cloud";  
 int port = 443; //(port 443 is default for HTTPS)
 
-String AuthorizationData = "Authorization: Bearer 1d8a1c1806d64015948a726ef86f5cac";
+String AuthorizationData = "Authorization: Bearer <YOUR DEVICE TOKEN>";
 
 float insTemp;
 char buf[200];
@@ -14,8 +14,8 @@ char buf[200];
 int ledState = 0;
 
 WiFiSSLClient client;
-char ssid[] = "TP-LINK_MAKERS";      //  your network SSID (name)
-char pass[] = "MAKERS-NS";
+char ssid[] = "SSID";      //  your network SSID (name)
+char pass[] = "PASSWORD";
 int status = WL_IDLE_STATUS;
 
 #define DHTPIN 5    // what pin we're connected to, pin1 is 5th pin from end
@@ -72,7 +72,7 @@ int loadBuffer(int insTemp, int insHumid ) {
    StaticJsonBuffer<200> jsonBuffer; // reserve spot in memory
 
    JsonObject& root = jsonBuffer.createObject(); // create root objects
-     root["sdid"] = "afdd76ad8d0d4fbaac111a4c2abe2d6c"; // FIX 
+     root["sdid"] = "<YOUR DEVICE ID>"; // FIX 
      root["type"] = "message";
 
    JsonObject& dataPair = root.createNestedObject("data"); // create nested objects
