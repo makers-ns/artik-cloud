@@ -1,0 +1,16 @@
+{
+  "event": "ArtikEvent",
+  "url": "https://api.artik.cloud/v1.1/messages",
+  "requestType": "POST",
+  "json": {
+    "sdid": "<YOUR DEVICE ID HERE>",
+    "data": {
+      "temp": "{{v}}"
+    },
+    "type": "message"
+  },
+  "headers": {
+    "Authorization": "Bearer <YOUR DEVICE TOKEN HERE>"
+  },
+  "mydevices": true
+}
